@@ -1,0 +1,9 @@
+<hello name="{{ name }}"></hello>
+<p>
+	<input
+    type="text"
+		[ngModel]="mgtFeeFromValue | number:'1.0-10'"
+		(ngModelChange)="onInputChange($event ,'mgtFeeFromValue')"
+    (keydown)="restrictNonNumeric($event)"
+    >
+</p>
