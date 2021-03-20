@@ -2,7 +2,7 @@
 <p>
 	<input
     type="text"
-		[ngModel]="mgtFeeFromValue | number:'1.0-10'"
+		[ngModel]="mgtFeeFromValue | number:'1.0-5'"
 		(ngModelChange)="onInputChange($event ,'mgtFeeFromValue')"
     (keydown)="restrictNonNumeric($event)"
     >
