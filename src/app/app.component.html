@@ -1,9 +1,15 @@
-<hello name="{{ name }}"></hello>
 <p>
 	<input
-    type="text"
-		[ngModel]="mgtFeeFromValue | number:'1.0-5'"
-		(ngModelChange)="onInputChange($event ,'mgtFeeFromValue')"
-    (keydown)="restrictNonNumeric($event)"
-    >
+	[ngModel]="numberWithoutCommas | number: numberFormatParam "
+	(ngModelChange)="onInputChange($event)"
+	(keydown)="restrictNonNumeric($event)"
+
+	[readonly]="klassReadOnly"
+	[disabled]="klassDisabled"
+	[maxlength]="klassInputLength"
+	[placeholder]="klassPlaceholder"
+
+	class ="{{ styleClass }}"
+	style ="{{ klassStyle }}"
+>
 </p>
